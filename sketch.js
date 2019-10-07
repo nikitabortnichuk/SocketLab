@@ -10,7 +10,7 @@ function setup() {
   background(1);
   // Start a socket connection to the server
   // Some day we would run this server somewhere else
-  socket = io.connect('https://bort1k.github.io/SocketLab/');
+  socket = io.connect(process.env.PORT || 3000);
   // We make a named event called 'mouse' and write an
   // anonymous callback function
   socket.on('mouse',
